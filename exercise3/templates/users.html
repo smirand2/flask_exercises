@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Registered Users</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Organization</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for index, name, organization in user_list %}
+        <tr>
+            <th scope="row">{{ index }}</th>
+            <td>{{ name }}</td>
+            <td colspan="2" class="table-active">{{ organization }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{{ url_for('home') }}">Back to Home</a>
+{% endblock %}

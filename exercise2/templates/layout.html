@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Integer Checker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter an Integer</h1>
+        <form action="/result" method="GET">
+            <input type="text" name="number" placeholder="Enter an integer" required >
+            <button type="submit">Check</button>
+        </form>
+    </div>
+</body>
+</html>
